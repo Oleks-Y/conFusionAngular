@@ -54,13 +54,13 @@
   </div>
 
 
-  <div fxFlex  *ngIf="leaders">
+  <div fxFlex  *ngIf="leaders" [@expand]>
     <h2>Corporate Leadership</h2>
     <p>Display the details of the corporate leaders here</p>
     <mat-grid-list cols="1" rowHeight="200px">
       <mat-grid-tile *ngFor="let leader of leaders" >
         
-        <img src={{leader.image}} alt={{leader.name}}>
+        <img  src="{{BaseURL + leader.image}}" alt={{leader.name}}>
         <div class="mymargin">
           <h3 >{{leader.name }}{{leader.abbr}}</h3>
           <p >{{leader.designation}}</p>
